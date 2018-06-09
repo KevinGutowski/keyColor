@@ -4,15 +4,163 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "my-command",
-      "identifier": "my-command-identifier",
-      "script": "./my-command.js"
+      "name": "Apply Fill Color 1",
+      "identifier": "applyFillColor1",
+      "script": "./my-command.js",
+      "handler": "applyFillColor1",
+      "shortcut": "ctrl 1"
+    },
+    {
+      "name": "Apply Fill Color 2",
+      "identifier": "applyFillColor2",
+      "script": "./my-command.js",
+      "handler": "applyFillColor2",
+      "shortcut": "ctrl 2"
+    },
+    {
+      "name": "Apply Fill Color 3",
+      "identifier": "applyFillColor3",
+      "script": "./my-command.js",
+      "handler": "applyFillColor3",
+      "shortcut": "ctrl 3"
+    },
+    {
+      "name": "Apply Fill Color 4",
+      "identifier": "applyFillColor4",
+      "script": "./my-command.js",
+      "handler": "applyFillColor4",
+      "shortcut": "ctrl 4"
+    },
+    {
+      "name": "Apply Fill Color 5",
+      "identifier": "applyFillColor5",
+      "script": "./my-command.js",
+      "handler": "applyFillColor5",
+      "shortcut": "ctrl 5"
+    },
+    {
+      "name": "Apply Fill Color 6",
+      "identifier": "applyFillColor6",
+      "script": "./my-command.js",
+      "handler": "applyFillColor6",
+      "shortcut": "ctrl 6"
+    },
+    {
+      "name": "Apply Fill Color 7",
+      "identifier": "applyFillColor7",
+      "script": "./my-command.js",
+      "handler": "applyFillColor7",
+      "shortcut": "ctrl 7"
+    },
+    {
+      "name": "Apply Fill Color 8",
+      "identifier": "applyFillColor8",
+      "script": "./my-command.js",
+      "handler": "applyFillColor8",
+      "shortcut": "ctrl 8"
+    },
+    {
+      "name": "Apply Fill Color 9",
+      "identifier": "applyFillColor9",
+      "script": "./my-command.js",
+      "handler": "applyFillColor9",
+      "shortcut": "ctrl 9"
+    },
+    {
+      "name": "Apply Border Color 1",
+      "identifier": "applyBorderColor1",
+      "script": "./my-command.js",
+      "handler": "applyBorderColor1",
+      "shortcut": "ctrl shift 1"
+    },
+    {
+      "name": "Apply Border Color 2",
+      "identifier": "applyBorderColor2",
+      "script": "./my-command.js",
+      "handler": "applyBorderColor2",
+      "shortcut": "ctrl shift 2"
+    },
+    {
+      "name": "Apply Border Color 3",
+      "identifier": "applyBorderColor3",
+      "script": "./my-command.js",
+      "handler": "applyBorderColor3",
+      "shortcut": "ctrl shift 3"
+    },
+    {
+      "name": "Apply Border Color 4",
+      "identifier": "applyBorderColor4",
+      "script": "./my-command.js",
+      "handler": "applyBorderColor4",
+      "shortcut": "ctrl shift 4"
+    },
+    {
+      "name": "Apply Border Color 5",
+      "identifier": "applyBorderColor5",
+      "script": "./my-command.js",
+      "handler": "applyBorderColor5",
+      "shortcut": "ctrl shift 5"
+    },
+    {
+      "name": "Apply Border Color 6",
+      "identifier": "applyBorderColor6",
+      "script": "./my-command.js",
+      "handler": "applyBorderColor6",
+      "shortcut": "ctrl shift 6"
+    },
+    {
+      "name": "Apply Border Color 7",
+      "identifier": "applyBorderColor7",
+      "script": "./my-command.js",
+      "handler": "applyBorderColor7",
+      "shortcut": "ctrl shift 7"
+    },
+    {
+      "name": "Apply Border Color 8",
+      "identifier": "applyBorderColor8",
+      "script": "./my-command.js",
+      "handler": "applyBorderColor8",
+      "shortcut": "ctrl shift 8"
+    },
+    {
+      "name": "Apply Border Color 9",
+      "identifier": "applyBorderColor9",
+      "script": "./my-command.js",
+      "handler": "applyBorderColor9",
+      "shortcut": "ctrl shift 9"
     }
   ],
   "menu": {
-    "title": "colorKey",
+    "title": "Key Color",
     "items": [
-      "my-command-identifier"
+      {
+        "title": "Apply Fill Color",
+        "items": [
+          "applyFillColor1",
+          "applyFillColor2",
+          "applyFillColor3",
+          "applyFillColor4",
+          "applyFillColor5",
+          "applyFillColor6",
+          "applyFillColor7",
+          "applyFillColor8",
+          "applyFillColor9"
+        ]
+      },
+      {
+        "title": "Apply Border Color",
+        "items": [
+          "applyBorderColor1",
+          "applyBorderColor2",
+          "applyBorderColor3",
+          "applyBorderColor4",
+          "applyBorderColor5",
+          "applyBorderColor6",
+          "applyBorderColor7",
+          "applyBorderColor8",
+          "applyBorderColor9"
+        ]
+      }
     ]
   }
 }
