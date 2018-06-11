@@ -1,11 +1,12 @@
 {
-  "name": "colorkey",
+  "name": "Key_Color",
   "version": "0.1.0",
   "engines": {
     "sketch": ">=3.0"
   },
   "skpm": {
-    "name": "colorKey",
+    "name": "Key Color",
+    "description": "Use keyboard shortcuts to easily apply colors from a set pallet.",
     "manifest": "src/manifest.json",
     "main": "plugin.sketchplugin",
     "assets": [
