@@ -128,6 +128,12 @@
       "script": "./my-command.js",
       "handler": "applyBorderColor9",
       "shortcut": "ctrl shift 9"
+    },
+    {
+      "name": "Settings",
+      "identifier": "settings",
+      "script": "./my-command.js",
+      "handler": "getSettings"
     }
   ],
   "menu": {
@@ -160,7 +166,8 @@
           "applyBorderColor8",
           "applyBorderColor9"
         ]
-      }
+      },
+        "settings"
     ]
   }
 }
