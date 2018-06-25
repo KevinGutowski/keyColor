@@ -164,7 +164,7 @@ const windowWidth = firstColumnWidth + secondColumnWidth;
 export function getSettings(context) {
   setup(context);
   localScriptPath = context.scriptPath;
-  context.document.showMessage('🗝🌈: Settings Open');
+  // context.document.showMessage('🗝🌈: Settings Open');
   let response = triggerAlert();
 
   if (response.alertOption == NSAlertFirstButtonReturn) {
@@ -211,7 +211,7 @@ function triggerAlert() {
   let alert = NSAlert.alloc().init();
   alert.setMessageText("Settings");
   alert.setInformativeText("Update your colors below. Be sure to use proper hex values. There is no validation yet.");
-  alert.addButtonWithTitle("Apply");
+  alert.addButtonWithTitle("Save");
   alert.addButtonWithTitle("Cancel");
   alert.icon = loadLocalImage({
     scriptPath: localScriptPath,
@@ -331,8 +331,4 @@ function loadLocalImage({ scriptPath, filePath }) {
     .stringByDeletingLastPathComponent();
   return NSImage.alloc().initWithContentsOfFile(basePath + "/" + filePath);
 
-}
-
-export function checkKey() {
-  console.log(Settings.globalSettingForKey('c1'));
 }
