@@ -37,7 +37,7 @@ You can also set custom colors via the settings (Plugins > Key Color > Settings)
 
 ## Contribute
 
-This plugin is in active development. Please submit please submit bugs 🐛.
+This plugin is in active development. Please submit bugs 🐛.
 
 ## Contact
 
