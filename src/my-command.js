@@ -270,15 +270,15 @@ function triggerAlert() {
   return {
     alertOption: alert.runModal(),
     options: [
-      row1.hexInput.stringValue(),
-      row2.hexInput.stringValue(),
-      row3.hexInput.stringValue(),
-      row4.hexInput.stringValue(),
-      row5.hexInput.stringValue(),
-      row6.hexInput.stringValue(),
-      row7.hexInput.stringValue(),
-      row8.hexInput.stringValue(),
-      row9.hexInput.stringValue()
+      String(row1.hexInput.stringValue()),
+      String(row2.hexInput.stringValue()),
+      String(row3.hexInput.stringValue()),
+      String(row4.hexInput.stringValue()),
+      String(row5.hexInput.stringValue()),
+      String(row6.hexInput.stringValue()),
+      String(row7.hexInput.stringValue()),
+      String(row8.hexInput.stringValue()),
+      String(row9.hexInput.stringValue())
     ]
   }
 }
