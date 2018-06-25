@@ -3,6 +3,7 @@ const Style = require('sketch/dom').Style
 var Settings = require('sketch/settings')
 var doc
 var selection
+var localScriptPath
 
 function setup(context) {
   doc = Document.getSelectedDocument()
@@ -11,7 +12,6 @@ function setup(context) {
   if (selection.length == 0) {
     context.document.showMessage('🗝🌈: Please select a layer')
   }
-  console.log(Settings.globalSettingForKey('c1'));
   if (Settings.globalSettingForKey('c1') == undefined) {
     console.log("Setting Colors -- No object");
     initalizeColors();
@@ -163,6 +163,7 @@ const windowWidth = firstColumnWidth + secondColumnWidth;
 
 export function getSettings(context) {
   setup(context);
+  localScriptPath = context.scriptPath;
   context.document.showMessage('🗝🌈: Settings Open');
   let response = triggerAlert();
 
@@ -209,9 +210,13 @@ function triggerAlert() {
 
   let alert = NSAlert.alloc().init();
   alert.setMessageText("Settings");
-  alert.setInformativeText("Choose an Artboard to apply into the selected shape.");
+  alert.setInformativeText("Update your colors below. Be sure to use proper hex values. There is no validation yet.");
   alert.addButtonWithTitle("Apply");
   alert.addButtonWithTitle("Cancel");
+  alert.icon = loadLocalImage({
+    scriptPath: localScriptPath,
+    filePath: "Contents/Resources/icon.png"
+  })
 
   let alertContent = NSView.alloc().init();
 
@@ -317,6 +322,15 @@ function getRow({ text, color }) {
     rowView,
     hexInput
   }
+}
+
+function loadLocalImage({ scriptPath, filePath }) {
+  let basePath = scriptPath
+    .stringByDeletingLastPathComponent()
+    .stringByDeletingLastPathComponent()
+    .stringByDeletingLastPathComponent();
+  return NSImage.alloc().initWithContentsOfFile(basePath + "/" + filePath);
+
 }
 
 export function checkKey() {
