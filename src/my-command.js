@@ -209,7 +209,7 @@ function triggerAlert() {
   var currentColor9 = Settings.globalSettingForKey('c9');
 
   let alert = NSAlert.alloc().init();
-  alert.setMessageText("Settings");
+  alert.setMessageText("Key Color Settings");
   alert.setInformativeText("Update your colors below. Be sure to use proper hex values. There is no validation yet.");
   alert.addButtonWithTitle("Save");
   alert.addButtonWithTitle("Cancel");
