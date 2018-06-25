@@ -12,9 +12,15 @@ Select a layer (or layers) and use one of the following keyboard commands.
 
 <kbd>^ Ctrl</kbd> + <kbd>1 - 9</kbd> = Apply Fill Color to Selection
 
+<img width="480" height="270" src="readme_assets/tut1.gif" >
+
 <kbd>^ Ctrl</kbd> + <kbd>shift</kbd> + <kbd>1 - 9</kbd> = Apply Border Color to Selection
 
+<img width="480" height="270" src="readme_assets/tut2.gif" >
+
 You can also set custom colors via the settings (Plugins > Key Color > Settings).
+
+<img width="532" height="545" src="readme_assets/settings.png" >
 
 ## Todos
 
