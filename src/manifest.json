@@ -134,6 +134,12 @@
       "identifier": "settings",
       "script": "./my-command.js",
       "handler": "getSettings"
+    },
+    {
+      "name": "Check Key",
+      "identifier": "checkKey",
+      "script": "./my-command.js",
+      "handler": "checkKey"
     }
   ],
   "menu": {
@@ -167,7 +173,8 @@
           "applyBorderColor9"
         ]
       },
-        "settings"
+        "settings",
+        "checkKey"
     ]
   }
 }

@@ -14,14 +14,12 @@ function setup(context) {
     context.document.showMessage('🗝🌈: Please select a layer')
   }
   console.log(Settings.globalSettingForKey('c1'));
-  console.log(Settings.globalSettingForKey('c1').length);
   if (Settings.globalSettingForKey('c1') == undefined) {
     console.log("Setting Colors -- No object");
     initalizeColors();
   } else if (Settings.globalSettingForKey('c1').length == undefined) {
     console.log("Setting Colors -- Object is empty");
     initalizeColors();
-    console.log(Settings.globalSettingForKey('c1').length);
   }
 }
 
@@ -146,17 +144,16 @@ function applyBorderColorWithSelection(color, selection) {
 }
 
 function initalizeColors() {
-  Settings.setGlobalSettingForKey("c1", "FF3B30"); //red
-  Settings.setGlobalSettingForKey("c2", "FF9500"); //orange
-  Settings.setGlobalSettingForKey("c3", "FFCC00"); //yellow
-  Settings.setGlobalSettingForKey("c4", "D8FF00"); //lime-green
-  Settings.setGlobalSettingForKey("c5", "4CD964"); //green
-  Settings.setGlobalSettingForKey("c6", "5AC8FA"); //teal blue
-  Settings.setGlobalSettingForKey("c7", "007AFF"); //blue
-  Settings.setGlobalSettingForKey("c8", "5856D6"); //purple
-  Settings.setGlobalSettingForKey("c9", "FF2D55"); //pink
+  Settings.setGlobalSettingForKey('c1', 'FF3B30'); //red
+  Settings.setGlobalSettingForKey('c2', 'FF9500'); //orange
+  Settings.setGlobalSettingForKey('c3', 'FFCC00'); //yellow
+  Settings.setGlobalSettingForKey('c4', 'D8FF00'); //lime-green
+  Settings.setGlobalSettingForKey('c5', '4CD964'); //green
+  Settings.setGlobalSettingForKey('c6', '5AC8FA'); //teal blue
+  Settings.setGlobalSettingForKey('c7', '007AFF'); //blue
+  Settings.setGlobalSettingForKey('c8', '5856D6'); //purple
+  Settings.setGlobalSettingForKey('c9', 'FF2D55'); //pink
 
-  console.log(Settings.globalSettingForKey('c1'));
 }
 
 const labelColumnHeight = 16;
@@ -167,11 +164,11 @@ const inputHeight = 22;
 const windowWidth = firstColumnWidth + secondColumnWidth;
 
 export function getSettings(context) {
-  setup(context)
+  setup(context);
   context.document.showMessage('🗝🌈: Settings Open');
   let response = triggerAlert();
 
-  if (response.alertOption = NSAlertFirstButtonReturn) {
+  if (response.alertOption == NSAlertFirstButtonReturn) {
     Settings.setGlobalSettingForKey('c1', response.options[0]);
     Settings.setGlobalSettingForKey('c2', response.options[1]);
     Settings.setGlobalSettingForKey('c3', response.options[2]);
@@ -182,10 +179,9 @@ export function getSettings(context) {
     Settings.setGlobalSettingForKey('c8', response.options[7]);
     Settings.setGlobalSettingForKey('c9', response.options[8]);
 
-    console.log('C1 Updated');
     console.log(response.options[0]);
-    console.log(response.options[0].stringValue);
     console.log(Settings.globalSettingForKey('c1'));
+
     context.document.showMessage('🗝🌈: Settings Updated!');
   } else {
     return
@@ -270,20 +266,19 @@ function triggerAlert() {
   alertContent.setFlipped(true);
 
   alert.accessoryView = alertContent;
-  console.log(row1.hexInput);
-  console.log(row1.hexInput.stringValue);
+
   return {
     alertOption: alert.runModal(),
     options: [
-      row1.hexInput,
-      row2.hexInput,
-      row3.hexInput,
-      row4.hexInput,
-      row5.hexInput,
-      row6.hexInput,
-      row7.hexInput,
-      row8.hexInput,
-      row9.hexInput
+      row1.hexInput.stringValue(),
+      row2.hexInput.stringValue(),
+      row3.hexInput.stringValue(),
+      row4.hexInput.stringValue(),
+      row5.hexInput.stringValue(),
+      row6.hexInput.stringValue(),
+      row7.hexInput.stringValue(),
+      row8.hexInput.stringValue(),
+      row9.hexInput.stringValue()
     ]
   }
 }
@@ -327,4 +322,8 @@ function getRow({ text, color }) {
     rowView,
     hexInput
   }
+}
+
+export function checkKey() {
+  console.log(Settings.globalSettingForKey('c1'));
 }
