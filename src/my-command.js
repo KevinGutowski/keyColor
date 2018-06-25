@@ -1,5 +1,3 @@
-import { Colors } from './Colors'
-
 const Document = require('sketch/dom').Document
 const Style = require('sketch/dom').Style
 var Settings = require('sketch/settings')
@@ -178,9 +176,6 @@ export function getSettings(context) {
     Settings.setGlobalSettingForKey('c7', response.options[6]);
     Settings.setGlobalSettingForKey('c8', response.options[7]);
     Settings.setGlobalSettingForKey('c9', response.options[8]);
-
-    console.log(response.options[0]);
-    console.log(Settings.globalSettingForKey('c1'));
 
     context.document.showMessage('🗝🌈: Settings Updated!');
   } else {
