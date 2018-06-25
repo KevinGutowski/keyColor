@@ -8,7 +8,7 @@
     "name": "Key Color",
     "description": "Use keyboard shortcuts to easily apply colors from a set pallet.",
     "manifest": "src/manifest.json",
-    "main": "plugin.sketchplugin",
+    "main": "keyColor.sketchplugin",
     "assets": [
       "assets/**/*"
     ]
