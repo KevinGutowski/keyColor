@@ -23,7 +23,7 @@ You can also set custom colors via the settings (Plugins > Key Color > Settings)
 - Make it easier to use colors with opacity
 - Add gradient support
 
-## Usage
+## Install
 
 1. [Download](https://github.com/KevinGutowski/keyColor/releases/download/v1.0.1/keyColor.sketchplugin.zip) the plugin
 2. Unzip the file
