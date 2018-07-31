@@ -117,10 +117,17 @@ export function applyBorderColor9(context) {
 
 function applyFillColorWithSelection(color, selection) {
   selection.forEach(layer => {
-    layer.style.fills = [{
-      fill: Style.FillType.Color,
-      color: color,
-    }]
+    if (layer.type == 'Text') {
+      var rgbColor = hexToRgb(color)
+      var msColor = MSColor.colorWithRed_green_blue_alpha(rgbColor.r / 255, rgbColor.g / 255, rgbColor.b / 255, 1.0)
+      layer.sketchObject.textColor = msColor
+    } else {
+      layer.style.fills = [{
+        fill: Style.FillType.Color,
+        color: color,
+      }]
+    }
+    
   })
     // TODO: Support layers within Groups
   doc.sketchObject.inspectorController().reload();
@@ -331,4 +338,20 @@ function loadLocalImage({ scriptPath, filePath }) {
     .stringByDeletingLastPathComponent();
   return NSImage.alloc().initWithContentsOfFile(basePath + "/" + filePath);
 
+}
+
+function hexToRgb(hex) {
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+
+  if (result) {
+    result = {
+          r : parseInt(result[1], 16),
+          g : parseInt(result[2], 16),
+          b : parseInt(result[3], 16),
+        }
+  } else {
+    result = null
+  }
+
+  return result;
 }
