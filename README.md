@@ -31,7 +31,7 @@ You can also set custom colors via the settings (Plugins > Key Color > Settings)
 
 ## Install
 
-1. [Download](https://github.com/KevinGutowski/keyColor/releases/download/v1.0.1/keyColor.sketchplugin.zip) the plugin
+1. [Download](https://github.com/KevinGutowski/keyColor/releases/download/v1.1.0/keyColor.sketchplugin.zip) the plugin
 2. Unzip the file
 3. Double-click the file, 'keyColor.sketchplugin'
 
