@@ -129,6 +129,7 @@ function applyFillColorWithSelection(color, selection) {
     }
     
   })
+    // TODO: Support text layers that have a fill set
     // TODO: Support layers within Groups
   doc.sketchObject.inspectorController().reload();
 }

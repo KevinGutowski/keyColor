@@ -234,7 +234,8 @@ function applyFillColorWithSelection(color, selection) {
         color: color
       }];
     }
-  }); // TODO: Support layers within Groups
+  }); // TODO: Support text layers that have a fill set
+  // TODO: Support layers within Groups
 
   doc.sketchObject.inspectorController().reload();
 }
