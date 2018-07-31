@@ -170,7 +170,7 @@
       "settings"
     ]
   },
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Use keyboard shortcuts to easily apply colors from a set pallet.",
   "name": "Key Color",
   "disableCocoaScriptPreprocessor": true,
